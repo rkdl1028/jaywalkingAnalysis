@@ -1,0 +1,30 @@
+<!--layout.html 공통부분 상속 -->
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+<br><br><br>
+<h3> 상관관계 분석 </h3>
+
+{% endblock %}
+
+{% block contents %}
+<div>
+
+<div>
+ {% if gu == '영등포구' %}
+    <img src="static\images\Yongdeungpo1_hitmap.png">
+    <img src="static\images\Yondeungpo2_corr_hitmap.png">
+    <img src="static\images\Yondeungpo3_corr_pairplot.png">
+    {% elif gu == '관악구' %}
+    <img src="static\images\Gwanak1_hitmap.png">
+    <img src="static\images\Gwanak2_corr_hitmap.png">
+    <img src="static\images\Gwanak3_corr_pairplot.png">
+    {% elif gu == '종로구' %}
+    <img src="static\images\Jongro1_hitmap.png">
+    <img src="static\images\Jongro2_corr_hitmap.png">
+    <img src="static\images\Jongro3_corr_pairplot.png">
+    {% else %}
+    <img src="static\images\Jongro1_hitmap.png">
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>KSSJ Project</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="static/css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="static/css/style.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+    <!-- 부트스트랩 연동 -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar {margin-bottom: 10;
+                 border-radius: 10;}
+        /* 상단에 여백 지정 */
+       .container { margin-top:30px }
+
+        /* 이미지 가변 크기로 지정 */
+        img { width:100%; height:auto; }
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" style="position:relative">
+  <div class="container">
+     <div class="navbar-header">
+        <a class="navbar-brand" href="/kssj">KSSJ Project</a>
+     </div>
+        <ul class="nav navbar-nav">
+            {% if menu == 'page1' or menu == 'page2' %}
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/page1">Boroughs</a></li>
+            <li><a href="/page5">Frequent Accident</a></li>
+            <li><a href="/page3?c1=인구밀도&c2=무단횡단+사고">Making yours</a></li>
+
+            {% elif menu == 'page5' %}
+                <li><a href="/">Home</a></li>
+                <li><a href="/page1">Boroughs</a></li>
+                <li class="active"><a href="/page5">Frequent Accident</a></li>
+                <li><a href="/page3?c1=인구밀도&c2=무단횡단+사고">Making yours</a></li>
+            {% elif menu == 'page3' %}
+                <li><a href="/">Home</a></li>
+                <li><a href="/page1">Boroughs</a></li>
+                <li><a href="/page5">Frequent Accident</a></li>
+                <li class="active"><a href="/page3?c1=인구밀도&c2=무단횡단+사고">Making yours</a></li>
+
+            {% else %}
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/page1">Boroughs</a></li>
+                <li><a href="/page5">Frequent Accident</a></li>
+                <li><a href="/page3?c1=인구밀도&c2=무단횡단+사고">Making yours</a></li>            
+{% endif %}
+
+        </ul>
+    <!--   실제 내용 -->
+        <div>
+        {% block pageTitle %}{% endblock %}
+         <hr>
+        {% block contents %}{% endblock %}
+        </div>
+
+        <div>
+            <br><br><br>
+            <p>copyrights&copy;KSSJ Project</p>
+        </div>
+      </div>
+
+</nav>
+
+	<!-- jQuery -->
+	<script src="static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="static/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="static/js/jquery.flexslider-min.js"></script>
+	<!-- Counters -->
+	<script src="static/js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="static/js/main.js"></script>
+</body>
+</html>

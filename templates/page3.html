@@ -1,0 +1,40 @@
+<!--layout.html 공통부분 상속 -->
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+<br><br><br>
+<h3>기타 상관관계 분석</h3>
+
+{% endblock %}
+
+
+{% block contents %}
+<div>
+
+
+    <form action="http://52.15.100.244/page3?c1&c2" method="get">
+        <label for="data1">요인1(Key1)</label>
+        <select class="selectpicker" name="c1">
+
+            {% for i in list %}
+            <option value="{{i}}" {% if i== c1 %} selected="selected" {% endif %}>{{i}}</option>
+            {% endfor %}
+
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label for="data2">요인2(Key2)</label>
+        <select class="selectpicker" name="c2">
+            {% for i in list %}
+            <option value="{{i}}" {% if i== c2 %} selected="selected" {% endif %}>{{i}}</option>
+            {% endfor %}
+        </select>
+        &nbsp;
+        <button>분석</button>
+    </form>
+    <iframe id="frame5" src="{{graph_url}}" height="500" width="700"></iframe>
+
+
+</div>
+<br><br><br><br><br><br><br><br><br>
+{% endblock %}

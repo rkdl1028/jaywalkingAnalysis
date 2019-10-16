@@ -1,0 +1,65 @@
+<!--layout.html 공통부분 상속 -->
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+<br><br><br>
+<h3> KSSJ Project </h3>
+
+{% endblock %}
+
+{% block contents %}
+
+<div class="jumbotron text-center">
+    <h2><b>Project Object</b></h2>
+    <p>사람 대 차 사고 中 사망자 절반은 <b>
+        <mark>무단횡단</mark>
+    </b>이 원인...
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>General bar</h3>
+            <p>유흥주점과 단란주점 수에 따른 상관관계
+                <br> ※ 「식품위생법」에 의거 자치구에 영업허가 또는 신고를 한 식품위생 관련업소 </p>
+            <p></p>
+        </div>
+        <div class="col-sm-4">
+            <h3>The number of foreigners</h3>
+            <p>서울특별시 등록외국인 현황에 따른 상관관계
+                <br> ※ 등록외국인은 출입국관리법에 의해 90일 초과 장기체류자 중에서 작성기준일 현재 외국인 등록표에 등재된 자의 집계결과</p>
+            <p></p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Population </h3>
+            <p>자치구별 인구 밀도에 따른 상관관계
+                <br>※ 산술적 인구 밀도 = (인구(명)/전체 면적(km2))</p>
+            <p>12세이상인구 중 통근, 통학 인구에 따른 상관관계
+                <br> ※ 통근인구: 매일 정기적으로 직장에 근무하러 다니는 자
+                <br> ※ 통학인구: 정규학교(원)뿐만 아니라 각종 기술학원 및 직업훈련원 등에 다니는 사람 </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Statics on Crosswalks</h3>
+            <p>신호등 유무에 따른 상관관계</p>
+            <p>횡단보도 수에 따른 상관관계
+                <br> ※ 「도로교통법」에 따라 도로표지 또는 표시에 의하여 보행자의 횡단용으로 마련된 부분 </p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Age Group</h3>
+            <p>미성년자 대상으로 5~9세, 10~14세, 15~19세로 세분화하여 연령대에 따른 상관관계</p>
+            <p>노령화 지수 및 노년 부양비 현황에 따른 상관관계
+                <br>※ 노령화 지수 = (65세이상 인구/0~14세 인구)*100
+                <br>※ 노년 부양비 = (65세이상 인구/15~64세 인구)*100</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Width of Road</h3>
+            <p>광로(40m이상), 대로(25m~40m), 중로(12m~25m), 소로(12m미만)으로 구분하여 도로폭에 따른 상관관계</p>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+<br><br><br>
+<h3> 무단횡단 사고 다발지역 검색(2017년) </h3>
+
+
+{% endblock %}
+
+{% block contents %}
+<form action="{{ url_for('page5') }}" method="GET">
+    <select name="gugu">
+        <option value="680" {% if gu1=='680' %} selected="selected" {% endif %}>강남구</option>
+        <option value="740" {% if gu1=='740' %} selected="selected" {% endif %}>강동구</option>
+        <option value="305" {% if gu1=='305' %} selected="selected" {% endif %}>강북구</option>
+        <option value="500" {% if gu1=='500' %} selected="selected" {% endif %}>강서구</option>
+        <option value="620" {% if gu1=='620' %} selected="selected" {% endif %}>관악구</option>
+        <option value="215" {% if gu1=='215' %} selected="selected" {% endif %}>광진구</option>
+        <option value="530" {% if gu1=='530' %} selected="selected" {% endif %}>구로구</option>
+        <option value="545" {% if gu1=='545' %} selected="selected" {% endif %}>금천구</option>
+        <option value="350" {% if gu1=='350' %} selected="selected" {% endif %}>노원구</option>
+        <option value="320" {% if gu1=='320' %} selected="selected" {% endif %}>도봉구</option>
+        <option value="230" {% if gu1=='230' %} selected="selected" {% endif %}>동대문구</option>
+        <option value="590" {% if gu1=='590' %} selected="selected" {% endif %}>동작구</option>
+        <option value="440" {% if gu1=='440' %} selected="selected" {% endif %}>마포구</option>
+        <option value="410" {% if gu1=='410' %} selected="selected" {% endif %}>서대문구</option>
+        <option value="650" {% if gu1=='650' %} selected="selected" {% endif %}>서초구</option>
+        <option value="200" {% if gu1=='200' %} selected="selected" {% endif %}>성동구</option>
+        <option value="290" {% if gu1=='290' %} selected="selected" {% endif %}>성북구</option>
+        <option value="710" {% if gu1=='710' %} selected="selected" {% endif %}>송파구</option>
+        <option value="470" {% if gu1=='470' %} selected="selected" {% endif %}>양천구</option>
+        <option value="560" {% if gu1=='560' %} selected="selected" {% endif %}>영등포구</option>
+        <option value="170" {% if gu1=='170' %} selected="selected" {% endif %}>용산구</option>
+        <option value="380" {% if gu1=='380' %} selected="selected" {% endif %}>은평구</option>
+        <option value="110" {% if gu1=='110' %} selected="selected" {% endif %}>종로구</option>
+        <option value="140" {% if gu1=='140' %} selected="selected" {% endif %}>중구</option>
+        <option value="260" {% if gu1=='260' %} selected="selected" {% endif %}>중랑구</option>
+    </select>
+    &nbsp;
+    <button type="submit">검색</button>
+</form>
+<iframe id="frame5" src="/page5/iframe/{{gu1}}" height="450" width="700"></iframe>
+<br><br><br><br><br><br><br><br><br>
+{% endblock %}
