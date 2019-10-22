@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 pymysql.install_as_MySQLdb()
 
 anal_merge=pd.read_csv('dynamic/data/anal_merge.csv')
-engine = create_engine("mysql+mysqldb://root:"+"12341234"+"@database-1.c2z9tseum4tk.us-east-2.rds.amazonaws.com", encoding='utf-8')
+engine = create_engine("mysql+mysqldb://", encoding='utf-8')
 conn=engine.connect()
 
 anal_merge.to_sql(name='sum_anal', con=engine, if_exists='append',index=False)
