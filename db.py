@@ -4,7 +4,7 @@ import pandas as pd
 
 # 데이터베이스 접속
 def get_connection():
-    conn = pymysql.connect(host='database-1.cxs7lnlzes7w.us-east-2.rds.amazonaws.com',user='root',password='12341234',db='anal_data',charset='utf8')
+    conn = pymysql.connect(host='',user='root',password='',db='anal_data',charset='utf8')
     return conn
 
 # AWS mysql로부터 데이터받아와 Dict자료형으로 바꿈
